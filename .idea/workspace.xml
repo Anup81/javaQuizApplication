@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="962d581e-4482-4626-8e54-f5a7919e8321" name="Changes" comment="Login Page Setting Up">
-      <change afterPath="$PROJECT_DIR$/src/quiz/application/Rules.java" afterDir="false" />
+    <list default="true" id="962d581e-4482-4626-8e54-f5a7919e8321" name="Changes" comment="Setting Up Rules Page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/application/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/application/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/application/Rules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/application/Rules.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658665180503</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Setting Up Rules Page">
+      <created>1658670526712</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658670526712</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Setting Up Rules Page">
+      <created>1658670686773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658670686773</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +135,7 @@
     <MESSAGE value="Quiz Application Setup" />
     <MESSAGE value="Setting Up Frame using JFrame" />
     <MESSAGE value="Login Page Setting Up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Page Setting Up" />
+    <MESSAGE value="Setting Up Rules Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting Up Rules Page" />
   </component>
 </project>
