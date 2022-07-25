@@ -17,6 +17,7 @@ public class Quiz extends JFrame implements ActionListener {
     public static int timer = 15;
     public static int ans_given = 0;
     public static int count = 0;
+    public static int score = 0;
     Quiz(){
         setBounds(50, 0, 1440, 850);
         getContentPane().setBackground(Color.WHITE);
@@ -202,13 +203,38 @@ public class Quiz extends JFrame implements ActionListener {
             op3.setEnabled(true);
             op4.setEnabled(true);
 
-            if(groupOptions.getSelection() == null){
-                useranswers[count][0] = "";
-            }else{
-                useranswers[count][0] = groupOptions.getSelection().getActionCommand();
+            if(count == 8){
+                next.setEnabled(false);
+                submit.setEnabled(true);
             }
-            count ++;  //0//1//2 ----
-            start(count);
+
+            if(count == 9){ //Submit Button
+                if(groupOptions.getSelection() == null){
+                    useranswers[count][0] = "";
+                }else{
+                    useranswers[count][0] = groupOptions.getSelection().getActionCommand();
+                }
+
+                for (int i=0; i < useranswers.length; i++){
+                    if(useranswers[i][0].equals(answers[i][1])){
+                        score += 10;
+                    }else{
+                        score += 0;
+                    }
+                }
+
+                setVisible(false);
+                //Score Class
+
+            }else{
+                if(groupOptions.getSelection() == null){
+                    useranswers[count][0] = "";
+                }else{
+                    useranswers[count][0] = groupOptions.getSelection().getActionCommand();
+                }
+                count ++;  //0//1//2 ----
+                start(count);
+            }
         }
 
     }
@@ -264,7 +290,24 @@ public class Quiz extends JFrame implements ActionListener {
             }
             lifeline.setEnabled(false);
         }else{
+            // For Submit Button
+            ans_given = 1;
+            if(groupOptions.getSelection() == null){
+                useranswers[count][0] = "";
+            }else{
+                useranswers[count][0] = groupOptions.getSelection().getActionCommand();
+            }
 
+            for (int i=0; i < useranswers.length; i++){
+                if(useranswers[i][0].equals(answers[i][1])){
+                    score += 10;
+                }else{
+                    score += 0;
+                }
+            }
+            setVisible(false);
+
+            //Score Class
         }
     }
 

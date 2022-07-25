@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="962d581e-4482-4626-8e54-f5a7919e8321" name="Changes" comment="Implementing Lifeline on Quiz">
+    <list default="true" id="962d581e-4482-4626-8e54-f5a7919e8321" name="Changes" comment="Fixing Issues on Lifeline Button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/quiz/application/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/application/Quiz.java" afterDir="false" />
     </list>
@@ -159,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658718326124</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixing Issues on Lifeline Button">
+      <created>1658718730034</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658718730034</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,6 +189,7 @@
     <MESSAGE value="Radio Button Added" />
     <MESSAGE value="Quiz Timer Section Implemented" />
     <MESSAGE value="Implementing Lifeline on Quiz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing Lifeline on Quiz" />
+    <MESSAGE value="Fixing Issues on Lifeline Button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing Issues on Lifeline Button" />
   </component>
 </project>
