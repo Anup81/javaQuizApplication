@@ -197,6 +197,10 @@ public class Quiz extends JFrame implements ActionListener {
             timer = 15;
         }else if(timer < 0){
             timer = 15;
+            op1.setEnabled(true);
+            op2.setEnabled(true);
+            op3.setEnabled(true);
+            op4.setEnabled(true);
 
             if(groupOptions.getSelection() == null){
                 useranswers[count][0] = "";
@@ -230,6 +234,11 @@ public class Quiz extends JFrame implements ActionListener {
         if(ae.getSource()==next){
             repaint();
 
+            op1.setEnabled(true);
+            op2.setEnabled(true);
+            op3.setEnabled(true);
+            op4.setEnabled(true);
+
             ans_given = 1;
 
             // Whenever User select an option or not.
@@ -253,6 +262,7 @@ public class Quiz extends JFrame implements ActionListener {
                 op1.setEnabled(false);
                 op4.setEnabled(false);
             }
+            lifeline.setEnabled(false);
         }else{
 
         }
