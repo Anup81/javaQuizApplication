@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="962d581e-4482-4626-8e54-f5a7919e8321" name="Changes" comment="Radio Button Added">
+    <list default="true" id="962d581e-4482-4626-8e54-f5a7919e8321" name="Changes" comment="Quiz Timer Section Implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/quiz/application/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/application/Quiz.java" afterDir="false" />
     </list>
@@ -145,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658715209069</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Quiz Timer Section Implemented">
+      <created>1658716517420</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658716517420</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +173,7 @@
     <MESSAGE value="Setting Up Rules Page" />
     <MESSAGE value="Rules Page with Start and Back Button Implemented" />
     <MESSAGE value="Radio Button Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Radio Button Added" />
+    <MESSAGE value="Quiz Timer Section Implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quiz Timer Section Implemented" />
   </component>
 </project>

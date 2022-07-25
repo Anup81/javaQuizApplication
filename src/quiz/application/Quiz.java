@@ -2,15 +2,21 @@ package quiz.application;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Quiz extends JFrame {
+public class Quiz extends JFrame implements ActionListener {
 
     String questions[][] = new String[10][5];
     String answers[][] = new String[10][2];
+    String useranswers[][] = new String[10][1];
     JLabel qno, question;
     JRadioButton op1, op2, op3, op4;
+    ButtonGroup groupOptions;
+    JButton next, lifeline, submit;
     public static int timer = 15;
-
+    public static int ans_given = 0;
+    public static int count = 0;
     Quiz(){
         setBounds(50, 0, 1440, 850);
         getContentPane().setBackground(Color.WHITE);
@@ -31,17 +37,17 @@ public class Quiz extends JFrame {
         add(question);
 
 
-        questions[0][0] = "Which is used to find and fix bugs in the Java programs.?";
-        questions[0][1] = "JVM";
-        questions[0][2] = "JDB";
-        questions[0][3] = "JDK";
-        questions[0][4] = "JRE";
+        questions[0][0] = "Who invented Java language?";
+        questions[0][1] = "James Gosling";
+        questions[0][2] = "Dennis Ritchie";
+        questions[0][3] = "Larry Page";
+        questions[0][4] = "Serge Page";
 
-        questions[1][0] = "What is the return type of the hashCode() method in the Object class?";
-        questions[1][1] = "int";
-        questions[1][2] = "Object";
-        questions[1][3] = "long";
-        questions[1][4] = "void";
+        questions[1][0] = "Which laboratory was Java invented or developed in?";
+        questions[1][1] = "Sun Microsystems";
+        questions[1][2] = "Bell Laboratory";
+        questions[1][3] = "Johnson and Johnson";
+        questions[1][4] = "Dennis Ritchie Office";
 
         questions[2][0] = "Which package contains the Random class?";
         questions[2][1] = "java.util package";
@@ -91,7 +97,7 @@ public class Quiz extends JFrame {
         questions[9][3] = "Use of exception handling";
         questions[9][4] = "Dynamic binding between objects";
 
-        answers[0][1] = "JDB";
+        answers[0][1] = "James Gosling";
         answers[1][1] = "int";
         answers[2][1] = "java.util package";
         answers[3][1] = "Marker Interface";
@@ -127,36 +133,39 @@ public class Quiz extends JFrame {
         add(op4);
 
 
-        ButtonGroup groupOptions = new ButtonGroup();
+        groupOptions = new ButtonGroup();
         groupOptions.add((op1));
         groupOptions.add((op2));
         groupOptions.add((op3));
         groupOptions.add((op4));
 
-        JButton next = new JButton("Next");
+        next = new JButton("Next");
         next.setBounds(1100, 550, 200, 40);
         next.setFont(new Font("Tahoma", Font.PLAIN, 22));
         next.setBackground(new Color(30, 144, 255));
         next.setForeground(Color.WHITE);
+        next.addActionListener(this);
         add(next);
 
-        JButton lifeline = new JButton("50-50 Lifeline");
+        lifeline = new JButton("50-50 Lifeline");
         lifeline.setBounds(1100, 630, 200, 40);
         lifeline.setFont(new Font("Tahoma", Font.PLAIN, 22));
         lifeline.setBackground(new Color(30, 144, 255));
         lifeline.setForeground(Color.WHITE);
+        lifeline.addActionListener(this);
         add(lifeline);
 
-        JButton submit = new JButton("Submit");
+        submit = new JButton("Submit");
         submit.setBounds(1100, 710, 200, 40);
         submit.setFont(new Font("Tahoma", Font.PLAIN, 22));
         submit.setBackground(new Color(30, 144, 255));
         submit.setForeground(Color.WHITE);
         submit.setEnabled(false);
+        submit.addActionListener(this);
         add(submit);
 
 
-        start(0);
+        start(count);
 
         setLayout(null);
         setVisible(true);
@@ -171,6 +180,8 @@ public class Quiz extends JFrame {
 
         if(timer > 0){
             g.drawString(time, 1100, 500);
+        }else{
+            g.drawString("Times Up!!", 1100, 500);
         }
         timer--;
 
@@ -181,14 +192,70 @@ public class Quiz extends JFrame {
             e.printStackTrace();
         }
 
+        if(ans_given == 1){
+            ans_given = 0;
+            timer = 15;
+        }else if(timer < 0){
+            timer = 15;
+
+            if(groupOptions.getSelection() == null){
+                useranswers[count][0] = "";
+            }else{
+                useranswers[count][0] = groupOptions.getSelection().getActionCommand();
+            }
+            count ++;  //0//1//2 ----
+            start(count);
+        }
+
     }
     public void start(int count){
         qno.setText("" + (count + 1) + "."); // Converting String to integer
         question.setText(questions[count][0]);
         op1.setText(questions[count][1]);
+        op1.setActionCommand(questions[count][1]);
+
         op2.setText(questions[count][2]);
+        op2.setActionCommand(questions[count][2]);
+
         op3.setText(questions[count][3]);
+        op3.setActionCommand(questions[count][2]);
+
         op4.setText(questions[count][4]);
+        op4.setActionCommand(questions[count][2]);
+
+        groupOptions.clearSelection();
+    }
+
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource()==next){
+            repaint();
+
+            ans_given = 1;
+
+            // Whenever User select an option or not.
+            if(groupOptions.getSelection() == null){
+                useranswers[count][0] = "";
+            }else{
+                useranswers[count][0] = groupOptions.getSelection().getActionCommand();
+            }
+
+            if(count == 8){
+                next.setEnabled(false);
+                submit.setEnabled(true);
+            }
+            count ++;
+            start(count);
+        }else if(ae.getSource()==lifeline){
+            if(count ==2 || count ==4 || count==6 || count==8 || count ==9){
+                op2.setEnabled(false);
+                op3.setEnabled(false);
+            }else{
+                op1.setEnabled(false);
+                op4.setEnabled(false);
+            }
+        }else{
+
+        }
     }
 
     public static void main(String[] args){
