@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="962d581e-4482-4626-8e54-f5a7919e8321" name="Changes" comment="Rules Page with Start and Back Button Implemented">
-      <change afterPath="$PROJECT_DIR$/src/quiz/application/Quiz.java" afterDir="false" />
+    <list default="true" id="962d581e-4482-4626-8e54-f5a7919e8321" name="Changes" comment="Radio Button Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/application/Rules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/application/Rules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/application/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/application/Quiz.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,16 +29,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/anup/Java Projects/javaQuizApplication",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/anup/Java Projects/javaQuizApplication&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Quiz">
     <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="quiz.application.Login" />
@@ -139,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658672763980</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Radio Button Added">
+      <created>1658715209069</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658715209069</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,6 +165,7 @@
     <MESSAGE value="Login Page Setting Up" />
     <MESSAGE value="Setting Up Rules Page" />
     <MESSAGE value="Rules Page with Start and Back Button Implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rules Page with Start and Back Button Implemented" />
+    <MESSAGE value="Radio Button Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Radio Button Added" />
   </component>
 </project>

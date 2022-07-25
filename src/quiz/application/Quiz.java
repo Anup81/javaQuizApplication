@@ -7,6 +7,9 @@ public class Quiz extends JFrame {
 
     String questions[][] = new String[10][5];
     String answers[][] = new String[10][2];
+    JLabel qno, question;
+    JRadioButton op1, op2, op3, op4;
+    public static int timer = 15;
 
     Quiz(){
         setBounds(50, 0, 1440, 850);
@@ -17,12 +20,12 @@ public class Quiz extends JFrame {
         image.setBounds(0, 0, 1440, 392);
         add(image);
 
-        JLabel qno = new JLabel("1");
+        qno = new JLabel();
         qno.setBounds(100, 450, 50, 30);
         qno.setFont(new Font("Tahoma", Font.PLAIN, 24));
         add(qno);
 
-        JLabel question = new JLabel("This is a question");
+        question = new JLabel();
         question.setBounds(150, 450, 900, 30);
         question.setFont(new Font("Tahoma", Font.PLAIN, 24));
         add(question);
@@ -99,33 +102,93 @@ public class Quiz extends JFrame {
         answers[8][1] = "java.lang.StringBuilder";
         answers[9][1] = "Bytecode is executed by JVM";
 
-        JRadioButton op1 = new JRadioButton("Option 1");
+        op1 = new JRadioButton();
         op1.setBounds(170, 520, 700, 30);
         op1.setBackground(Color.WHITE);
         op1.setFont(new Font("Dialog", Font.PLAIN, 20));
         add(op1);
 
-        JRadioButton op2 = new JRadioButton("Option 1");
+        op2 = new JRadioButton();
         op2.setBounds(170, 560, 700, 30);
         op2.setBackground(Color.WHITE);
         op2.setFont(new Font("Dialog", Font.PLAIN, 20));
         add(op2);
 
-        JRadioButton op3 = new JRadioButton("Option 1");
+        op3 = new JRadioButton();
         op3.setBounds(170, 600, 700, 30);
         op3.setBackground(Color.WHITE);
         op3.setFont(new Font("Dialog", Font.PLAIN, 20));
         add(op3);
 
-        JRadioButton op4 = new JRadioButton("Option 1");
+        op4 = new JRadioButton();
         op4.setBounds(170, 640, 700, 30);
         op4.setBackground(Color.WHITE);
         op4.setFont(new Font("Dialog", Font.PLAIN, 20));
         add(op4);
 
 
+        ButtonGroup groupOptions = new ButtonGroup();
+        groupOptions.add((op1));
+        groupOptions.add((op2));
+        groupOptions.add((op3));
+        groupOptions.add((op4));
+
+        JButton next = new JButton("Next");
+        next.setBounds(1100, 550, 200, 40);
+        next.setFont(new Font("Tahoma", Font.PLAIN, 22));
+        next.setBackground(new Color(30, 144, 255));
+        next.setForeground(Color.WHITE);
+        add(next);
+
+        JButton lifeline = new JButton("50-50 Lifeline");
+        lifeline.setBounds(1100, 630, 200, 40);
+        lifeline.setFont(new Font("Tahoma", Font.PLAIN, 22));
+        lifeline.setBackground(new Color(30, 144, 255));
+        lifeline.setForeground(Color.WHITE);
+        add(lifeline);
+
+        JButton submit = new JButton("Submit");
+        submit.setBounds(1100, 710, 200, 40);
+        submit.setFont(new Font("Tahoma", Font.PLAIN, 22));
+        submit.setBackground(new Color(30, 144, 255));
+        submit.setForeground(Color.WHITE);
+        submit.setEnabled(false);
+        add(submit);
+
+
+        start(0);
+
         setLayout(null);
         setVisible(true);
+    }
+
+    public void paint(Graphics g){
+        super.paint(g);
+
+        String time = "Time Left " + timer + " seconds"; //15
+        g.setColor(Color.RED);
+        g.setFont(new Font("Tahoma", Font.BOLD, 25));
+
+        if(timer > 0){
+            g.drawString(time, 1100, 500);
+        }
+        timer--;
+
+        try{
+            Thread.sleep(1000);
+            repaint();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+    public void start(int count){
+        qno.setText("" + (count + 1) + "."); // Converting String to integer
+        question.setText(questions[count][0]);
+        op1.setText(questions[count][1]);
+        op2.setText(questions[count][2]);
+        op3.setText(questions[count][3]);
+        op4.setText(questions[count][4]);
     }
 
     public static void main(String[] args){
