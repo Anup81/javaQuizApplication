@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="962d581e-4482-4626-8e54-f5a7919e8321" name="Changes" comment="Score Class Name Fixes">
+    <list default="true" id="962d581e-4482-4626-8e54-f5a7919e8321" name="Changes" comment="Setting Up Score class and Extending JFrame">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/quiz/application/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/application/Score.java" afterDir="false" />
     </list>
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658719891805</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Setting Up Score class and Extending JFrame">
+      <created>1658906875853</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658906875853</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +227,7 @@
     <MESSAGE value="Fixing Issues on Lifeline Button" />
     <MESSAGE value="Quiz Section Completed and Implementing Score class" />
     <MESSAGE value="Score Class Name Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Score Class Name Fixes" />
+    <MESSAGE value="Setting Up Score class and Extending JFrame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting Up Score class and Extending JFrame" />
   </component>
 </project>
