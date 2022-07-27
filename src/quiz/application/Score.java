@@ -6,8 +6,9 @@ import java.awt.event.ActionListener;
 public class Score extends JFrame implements ActionListener {
 
     Score(String name, int score){
-        setBounds(600, 150, 750, 550);
+        setBounds(400, 150, 750, 550);
         getContentPane().setBackground(Color.WHITE);
+        setLayout(null);
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/score.png"));
         Image i2 = i1.getImage().getScaledInstance(300, 250, Image.SCALE_DEFAULT);
@@ -16,15 +17,15 @@ public class Score extends JFrame implements ActionListener {
         image.setBounds(0, 200, 300, 250);
         add(image);
 
-        JLabel heading = new JLabel("Thank You" + name + "for playing Quiz Game!");
+        JLabel heading = new JLabel("Thankyou " + name + " for playing Quiz Game");
         heading.setBounds(45, 30, 700, 30);
-        heading.setFont(new Font("Tahoma", Font.PLAIN, 24));
+        heading.setFont(new Font("Tahoma", Font.PLAIN, 26));
         add(heading);
 
-        JLabel lscore = new JLabel("Your Score is: " + score);
-        lscore.setBounds(350, 200, 300, 30);
-        lscore.setFont(new Font("Tahoma", Font.PLAIN, 24));
-        add(lscore);
+        JLabel lbscore = new JLabel("Your score is " + score);
+        lbscore.setBounds(350, 200, 300, 30);
+        lbscore.setFont(new Font("Tahoma", Font.PLAIN, 26));
+        add(lbscore);
 
         JButton submit = new JButton("Play Again");
         submit.setBounds(380, 270, 120, 30);
